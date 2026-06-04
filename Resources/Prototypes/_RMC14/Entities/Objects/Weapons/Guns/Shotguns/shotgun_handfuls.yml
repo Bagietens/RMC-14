@@ -270,6 +270,43 @@
   spawn: CMShellShotgunIncendiaryBuckshot
   maxCount: 5
 
+- type: entity
+  parent: CMShellShotgunBase
+  id: CMShellShotgunSupershell
+  name: handful of supershell shells
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    layers:
+    - state: flechette_shell_1
+      map: [ "base" ]
+  - type: CartridgeAmmo
+    proto: CMPelletShotgunFlechette
+  - type: Stack
+    count: 5
+    stackType: RMCShellShotgunFlechette
+    baseLayer: base
+    layerStates:
+    - flechette_shell_1
+    - flechette_shell_1
+    - flechette_shell_2
+    - flechette_shell_3
+    - flechette_shell_4
+    - flechette_shell_5
+  - type: Tag
+    tags:
+    - RMCHandful
+    - Cartridge
+    - RMCShellShotgun
+    - RMCShellShotgunSupershell
+
+- type: stack
+  id: RMCShellShotgunSupershell
+  name: handful of supershell shells
+  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: flechette_shell_1 }
+  spawn: CMShellShotgunSupershell
+  maxCount: 5
+
 # RCM, PVE
 
 - type: entity
@@ -338,6 +375,9 @@
 
 - type: Tag
   id: RMCShellShotgunFlechette
+
+- type: Tag
+  id: RMCShellShotgunSupershell
 
 - type: Tag
   id: RMCShellShotgunIncendiaryBuckshot

@@ -171,6 +171,34 @@
       falloff: 1
 
 - type: entity
+  parent: CMPelletShotgunBase
+  id: CMPelletShotgunSupershell
+  name: supershell shell
+  components:
+  - type: CMArmorPiercing
+    amount: 60
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
+    layers:
+    - state: flechette
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 50
+  - type: ProjectileSpread
+    proto: CMPelletShotgunSupershell
+    count: 6
+    spread: 3
+  - type: RMCProjectileDamageFalloff
+    thresholds:
+    - range: 30
+      falloff: 9999
+      ignoreModifiers: true
+    - range: 0
+      falloff: 1
+
+- type: entity
   parent: CMPelletShotgunBuckshot
   id: CMPelletShotgunIncendiaryBuckshot
   name: incendiary buckshot shell

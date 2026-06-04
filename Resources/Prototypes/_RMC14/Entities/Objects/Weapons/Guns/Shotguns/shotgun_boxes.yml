@@ -189,6 +189,35 @@
 
 - type: entity
   parent: RMCBoxShotgunBase
+  id: RMCBoxShotgunSupershell
+  name: box of supershell shells
+  description: A box filled with supershell shotgun shells. 12 Gauge.
+  components:
+  - type: Storage
+    whitelist:
+      tags:
+      - RMCShellShotgunSupershell
+  - type: StorageFill
+    contents:
+    - id: CMShellShotgunSupershell
+      amount: 5
+  - type: Sprite
+    layers:
+    - state: smallshell_box
+      color: "#6551a0"
+    - state: shell_box_buckshot
+      color: "#e0d5c2"
+    - state: smallshell_ammo_full_12g_base
+      color: "#ffffff"
+    - state: smallshell_ammo_full_12g_color
+      color: "#6551a0"
+      map: [ "full" ]
+    - state: smallshell_empty
+      map: [ "empty" ]
+      color: "#6551a0"
+
+- type: entity
+  parent: RMCBoxShotgunBase
   id: RMCBoxShotgunIncendiaryBuckshot
   name: box of incendiary buckshot shells
   description: A box filled with self-detonating buckshot incendiary shotgun rounds. 12 Gauge.
